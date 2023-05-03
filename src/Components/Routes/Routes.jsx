@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../Pages/Home/Chef";
+// import Home from "../Pages/Home/Chef";
 import MainLayout from "../Layouts/MainLayout";
 import Chef from "../Pages/Home/Chef";
 import ChefDetailsLayout from "../Layouts/ChefDetailsLayout";

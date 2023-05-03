@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
-import ChefCardDetail from './ChefCardDetail';
 import { Button, Card } from 'react-bootstrap';
 import { FaThumbsUp } from 'react-icons/fa';
+import ChefRecipe from './chefRecipe';
 
 const ChefDetails = () => {
     const {id} = useParams();
     const chefDetails = useLoaderData();
-    console.log(chefDetails);
+    // console.log(chefDetails);
     const {name, picture, recipes,experience,likes,_id,bio} = chefDetails;
     return (
         <div>
@@ -35,6 +35,7 @@ const ChefDetails = () => {
       
       </Card.Footer>
     </Card>
+    <ChefRecipe></ChefRecipe>
         </div>
     );
 };
