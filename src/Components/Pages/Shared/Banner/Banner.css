@@ -1,0 +1,13 @@
+.banner{
+   background-image: url(../../../../assets/banner-4.jpg);
+   opacity: 90%;
+   background-repeat: no-repeat;
+   background-size: cover;
+ 
+}
+
+.banner h1{
+    color: rgb(255, 255, 255);
+    padding: 8rem;
+    font-size: 4rem;
+}

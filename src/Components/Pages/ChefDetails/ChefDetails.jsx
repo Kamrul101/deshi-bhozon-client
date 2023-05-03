@@ -1,0 +1,42 @@
+import React from 'react';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
+import ChefCardDetail from './ChefCardDetail';
+import { Button, Card } from 'react-bootstrap';
+import { FaThumbsUp } from 'react-icons/fa';
+
+const ChefDetails = () => {
+    const {id} = useParams();
+    const chefDetails = useLoaderData();
+    console.log(chefDetails);
+    const {name, picture, recipes,experience,likes,_id,bio} = chefDetails;
+    return (
+        <div>
+        <Card className="">
+      <Card.Img  variant="top" src={picture} className="w-100"/>
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>
+        Bio: {bio}
+        </Card.Text>
+        <Card.Text>
+        Years of Experiences:{experience}
+        </Card.Text>
+        <Card.Text>
+        Numbers of Recipes:{recipes}
+        </Card.Text>
+        
+      </Card.Body>
+      <Card.Footer className="d-flex align-items-center">
+        <Card.Text className="flex-grow-1 fs-4">
+            <FaThumbsUp ></FaThumbsUp>
+            {likes}</Card.Text>
+        <Link to={`/chefDetails/${id}`}>
+        <Button variant="primary">View Recipes</Button></Link>
+      
+      </Card.Footer>
+    </Card>
+        </div>
+    );
+};
+
+export default ChefDetails;
