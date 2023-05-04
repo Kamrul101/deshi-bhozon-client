@@ -93,7 +93,7 @@ const Login = () => {
       </Form>
       <Button onClick={handleGoogle} variant="success" className="my-3"><FaGoogle className="fs-3"></FaGoogle> Sign up with Google</Button> <br />
       <Button onClick={handleGitHub} variant="secondary"><FaGithub className="fs-3"/> Sign Up with GitHUb</Button>
-      <p>{error}</p>
+      <p className="text-danger fs-2">{error}</p>
     </Container>
     
         </div>

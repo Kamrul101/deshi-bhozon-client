@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Chef></Chef>,
-                loader: ()=> fetch('http://localhost:5000/chef')
+                loader: ()=> fetch('https://recipe-hunter-server-one.vercel.app/chef')
             }
         ]
     },
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
             {
                 path:':id',
                 element:<ChefDetails></ChefDetails>,
-                loader: ({params})=>fetch(`http://localhost:5000/chef/${params.id}`)
+                loader: ({params})=>fetch(`https://recipe-hunter-server-one.vercel.app/chef/${params.id}`)
             } , 
             
         ]
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
                 {
                     path:':id',
                     element:<Recipe></Recipe>,
-                    loader: ({params})=> fetch(`http://localhost:5000/recipeSingle/${params.id}`)
+                    loader: ({params})=> fetch(`https://recipe-hunter-server-one.vercel.app/recipeSingle/${params.id}`)
                 }
             
         ]

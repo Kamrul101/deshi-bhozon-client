@@ -79,7 +79,7 @@ const Register = () => {
         <Form.Text className="text-success"></Form.Text>
         <Form.Text className="text-danger"></Form.Text>
       </Form>
-      <p className="text-error">{error}</p>
+      <p className="text-error text-danger fs-2">{error}</p>
     </Container>
     
         </div>
