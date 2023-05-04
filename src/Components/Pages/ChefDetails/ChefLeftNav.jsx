@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import { Button, Card, Container } from "react-bootstrap";
 import "./ChefLeftNav.css"
 
 const ChefLeftNav = () => {
@@ -12,18 +12,21 @@ const ChefLeftNav = () => {
           <Card.Body className="text-center">
             <Card.Title>American</Card.Title>
           </Card.Body>
+          <Button variant="danger">Explore</Button>
         </Card>
         <Card className="extra-section" style={{ width: "20rem" }}>
           <Card.Img variant="top" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" />
           <Card.Body className="text-center">
             <Card.Title>Chinese</Card.Title>
           </Card.Body>
+          <Button variant="danger">Explore</Button>
         </Card>
         <Card className="extra-section" style={{ width: "20rem" }}>
           <Card.Img variant="top" src="https://images.unsplash.com/photo-1605013343009-c126c3dc2f9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" />
           <Card.Body className="text-center">
             <Card.Title>American</Card.Title>
           </Card.Body>
+          <Button variant="danger">Explore</Button>
         </Card>
       </Container>
     </div>
