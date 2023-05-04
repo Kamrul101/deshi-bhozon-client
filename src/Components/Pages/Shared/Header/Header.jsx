@@ -9,7 +9,12 @@ import { Button } from "react-bootstrap";
 import { AuthContext } from "../../../Providers.jsx/AuthProviders";
 
 const Header = () => {
-  const {user} = useContext(AuthContext);
+  const {user,logOut} = useContext(AuthContext);
+  const handleLogout = () => {
+      logOut()
+      .then()
+      .catch(error => console.log(error))
+  }
   return (
     <div>
       <Navbar collapseOnSelect expand="md"  className="navbar">
@@ -27,7 +32,7 @@ const Header = () => {
                 <FaRegUserCircle className="fs-1"/>
               </Nav.Link>}
                 
-                {user ?<Button  variant="dark">Logout</Button> :
+                {user ?<Button onClick={handleLogout} variant="dark">Logout</Button> :
                 <Link to='/login'><Button variant="success">Login</Button></Link>}
               
               
