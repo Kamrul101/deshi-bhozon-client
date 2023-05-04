@@ -11,3 +11,9 @@
     padding: 8rem;
     font-size: 4rem;
 }
+@media screen and (max-width:576px) {
+    .banner h1{
+       font-size: 2rem;
+       padding: 2rem;
+    }
+}
