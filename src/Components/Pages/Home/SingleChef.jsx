@@ -8,7 +8,7 @@ const SingleChef = ({ oneChef }) => {
   // console.log(oneChef);
   const {id, name, picture, recipes,experience,likes,_id} = oneChef;
   return (
-    <Card className="">
+    <Card className="mb-3 me-3" style={{ width: "25rem" }}>
       <Card.Img variant="top" src={picture} className="pt-2"/>
       <Card.Body>
         <Card.Title>{name}</Card.Title>

@@ -1,13 +1,16 @@
 
 import React, { useContext, useState } from "react";
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Container, Form} from "react-bootstrap";
 import { Link, useLocation, useNavigate} from "react-router-dom";
 import { AuthContext } from "../../Providers.jsx/AuthProviders";
-
+import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 
 const Login = () => {
-   const {signInUser} = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
+    const gitHubProvider = new GithubAuthProvider();
+   const {signInUser,signInWithGoogle,signInWithGitHub} = useContext(AuthContext);
 
    const navigate = useNavigate();
    const location = useLocation();
@@ -33,8 +36,35 @@ const Login = () => {
     })
     
    }
+   const handleGoogle = () =>{
+        signInWithGoogle(googleProvider)
+        .then((result) => {
+            const user = result.user;
+            // setUser(user);
+            console.log(user);
+            navigate(from, {replace:true})
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
+   }
+   const handleGitHub = ( ) =>{
+        signInWithGitHub(gitHubProvider)
+        .then((result) => {
+            const user = result.user;
+            // setUser(user);
+            console.log(user);
+            navigate(from, {replace:true})
+          })
+          .catch((error) => {
+            const errorMessage = error.message;
+            console.log(errorMessage);
+          });
+
+   }
     return (
-        <div>
+        <div className="mt-5 login-page">
            <Container className="w-50 mx-auto">
       <Form onSubmit={handleSignIn} >
         <h2>Please login</h2>
@@ -61,8 +91,11 @@ const Login = () => {
         <Form.Text className="text-success"></Form.Text>
         <Form.Text className="text-danger"></Form.Text>
       </Form>
+      <Button onClick={handleGoogle} variant="success" className="my-3"><FaGoogle className="fs-3"></FaGoogle> Sign up with Google</Button> <br />
+      <Button onClick={handleGitHub} variant="secondary"><FaGithub className="fs-3"/> Sign Up with GitHUb</Button>
       <p>{error}</p>
-    </Container> 
+    </Container>
+    
         </div>
     );
 };

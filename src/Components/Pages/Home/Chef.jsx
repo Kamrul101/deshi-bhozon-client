@@ -8,9 +8,9 @@ const Chef = () => {
     // console.log(chef);
     return (
         <div>
-            <h1>All chef</h1>
+            <h1 className='text-success'>The best we can offer</h1>
             <div className='row'>
-            <Row xs={1} md={3} className="">
+            <Row xs={1} md={2} className="">
                 {
                     chef.map(oneChef =>
                         <SingleChef

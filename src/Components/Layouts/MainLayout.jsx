@@ -4,19 +4,20 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 import Footer from "../Pages/Shared/Footer/Footer";
 import Banner from "../Pages/Shared/Banner/Banner";
+import ChefLeftNav from "../Pages/ChefDetails/ChefLeftNav";
 
 const MainLayout = () => {
   return (
     <div>
       <Header></Header>
       <Banner></Banner>
-      <Container>
+      <Container className="mt-5">
         <Row>
           <Col lg={9} >
             <Outlet></Outlet>
           </Col>
           <Col lg={3}>
-            <h1>New One</h1>
+            <ChefLeftNav></ChefLeftNav>
           </Col>
         </Row>
       </Container>

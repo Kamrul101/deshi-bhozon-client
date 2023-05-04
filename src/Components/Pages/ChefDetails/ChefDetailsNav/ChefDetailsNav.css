@@ -1,0 +1,18 @@
+.details-nav-1{
+    background-image: url('https://plus.unsplash.com/premium_photo-1667927477995-bc148fa9e3d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.details-nav-1 h3{
+    padding: 1rem;
+}
+.details-nav-2{
+    background-image: url('https://plus.unsplash.com/premium_photo-1667927478077-47f4557213d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.details-nav-2 h3{
+    padding: 1rem;
+}
