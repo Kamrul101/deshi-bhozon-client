@@ -30,8 +30,8 @@ const ChefDetails = () => {
         <Card.Text className="flex-grow-1 fs-4">
             <FaThumbsUp ></FaThumbsUp>
             {likes}</Card.Text>
-        <Link to={`/chefDetails/${id}`}>
-        <Button variant="primary">View Recipes</Button></Link>
+        <Link to='/'>
+        <Button variant="primary">All Chefs</Button></Link>
       
       </Card.Footer>
     </Card>

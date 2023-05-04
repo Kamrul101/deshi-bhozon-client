@@ -10,7 +10,7 @@ const Chef = () => {
         <div>
             <h1>All chef</h1>
             <div className='row'>
-            <Row xs={1} md={3} className="g-4">
+            <Row xs={1} md={3} className="">
                 {
                     chef.map(oneChef =>
                         <SingleChef

@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 // import Home from "../Pages/Home/Chef";
 import MainLayout from "../Layouts/MainLayout";
 import Chef from "../Pages/Home/Chef";
@@ -6,8 +6,12 @@ import ChefDetailsLayout from "../Layouts/ChefDetailsLayout";
 import ChefDetails from "../Pages/ChefDetails/ChefDetails";
 import Recipe from "../Pages/ChefDetails/Recipe/Recipe";
 import RecipeLayout from "../Layouts/RecipeLayout";
+import RegisterLayOut from "../Layouts/RegisterLayOut";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const router = createBrowserRouter([
+    
     {
         path:'/',
         element: <MainLayout></MainLayout>,
@@ -28,6 +32,7 @@ const router = createBrowserRouter([
                 element:<ChefDetails></ChefDetails>,
                 loader: ({params})=>fetch(`http://localhost:5000/chef/${params.id}`)
             } , 
+            
         ]
     },
     {
@@ -42,6 +47,20 @@ const router = createBrowserRouter([
                 }
             
         ]
-    }
+    },
+    {
+        path:'/',
+        element:<RegisterLayOut></RegisterLayOut>,
+        children:[
+            {
+                path:'/login',
+                element:<Login></Login>
+            },
+            {
+                path:'register',
+                element:<Register></Register>
+            }
+        ]
+    },
 ])
 export default router;

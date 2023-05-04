@@ -6,3 +6,8 @@
 .nav-title :link{
     text-decoration: none;
 }
+.all-links a{
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+}
